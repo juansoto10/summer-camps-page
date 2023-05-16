@@ -46,6 +46,38 @@ function toggleScroll() {
 // Call the toggleScroll function when the opacity of the ul element changes
 /* menuItems.addEventListener('transitionend', toggleScroll); */
 
+/* <!-- Card -->
+<a class="mb-10 transition ease-in-out duration-300 hover:scale-[1.03]" href="/experience/">
+  <article class="flex flex-col justify-center items-center rounded-xl shadow-4xl max-w-[380px] dark:bg-dark-sec">
+    <!-- <img
+      class="w-full rounded-t-xl max-h-[250px]"
+      src="https://i.postimg.cc/wMHFNCW8/portrait-787522-960-720.jpg" 
+      alt="person"
+    > -->
+
+    <!-- Text container -->
+    <div class="px-4 pt-3">
+      <h3 class="font-bold text-lg mb-2 text-orange-400">
+        Jessica Valencia
+      </h3>
+
+      <p class="mb-2">
+        “En el choque cultural no fue tanto como un choque cultural entre Colombia y
+        Estados Unidos porque fue al contrario. Yo no soy una persona de estar tocando a la
+        gente, ni abrazando, ni dando besos, ni nada. Y sí me encontré con bastantes personas
+        allá que sí lo hacían. Para mí fue como mi burbuja personal y para ellos no tenían
+        tanto problema con eso. Otro choque cultural fue que yo pude hacer chocolate caliente
+        y ponerle queso adentro. Para ellos eso les pareció horrible y la mayoría me miraban
+        como con ganas de vomitar porque le ponía el queso al chocolate caliente”.
+      </p>
+
+      <span class="block text-orange-500 text-sm text-right mb-1 font-light">Click to comment</span>
+    </div>
+    <!-- End of Text container -->       
+  </article>
+</a>
+<!-- End of Card --> */
+
 
 // Experiences
 function renderCards(data, container) {
@@ -63,35 +95,26 @@ function renderCards(data, container) {
     article.classList.add('flex', 'flex-col', 'justify-center', 'items-center', 'rounded-xl', 'shadow-md', 'max-w-[380px]', 'dark:bg-dark-sec');
 
     const div = document.createElement('div');
-
-    const img = document.createElement('img');
-    img.classList.add('w-full', 'rounded-t-xl', 'h-[230px]', 'sm:h-[220px]', 'md:h-[230px]', '2xl:h-[220px]');
-    img.src = experience.thumbnail;
-    img.alt = `Experience of ${experience.name}`;
-
-    const secDiv = document.createElement('div');
-    secDiv.classList.add('px-4', 'pt-3');
+    div.classList.add('px-4', 'pt-3');
 
     const h3 = document.createElement('h3');
     h3.classList.add('font-bold', 'text-lg', 'mb-2', 'text-orange-400');
-    h3Text = document.createTextNode(`${experience.name}, ${experience.age}`);
+    const h3Text = document.createTextNode(experience.name);
     h3.append(h3Text);
 
     p = document.createElement('p');
     p.classList.add('mb-2', '2xl:h-[168px]');
     // Short text
-    const shortText = experience.text.substr(0, 220) + '...';
-    pText = document.createTextNode(shortText);
-    p.append(pText);
+    // const text = experience.text.substr(0, 220) + '...';
+    const text = document.createTextNode(`"${experience.text}".`);
+    p.append(text);
 
     span = document.createElement('span');
     span.classList.add('block', 'text-orange-500', 'text-sm', 'text-right', 'mb-1', 'font-light');
-    spanText = document.createTextNode('Click to read');
+    spanText = document.createTextNode('Click to comment');
     span.append(spanText);
 
-    secDiv.append(h3, p, span);
-
-    div.append(img, secDiv);
+    div.append(h3, p, span);
 
     article.append(div);
 

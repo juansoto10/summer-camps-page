@@ -1,4 +1,4 @@
-<a class="mb-10 transition ease-in-out duration-300 hover:scale-[1.03]" href="/experience/">
+            <a class="mb-10 transition ease-in-out duration-300 hover:scale-[1.03]" href="/experience/">
               <article class="flex flex-col justify-center items-center rounded-xl shadow-md max-w-[380px] dark:bg-dark-sec">
                 <div>
                   <img

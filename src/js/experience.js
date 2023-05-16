@@ -23,7 +23,7 @@ function showExperience(name) {
 
   const h3 = document.createElement('h3');
   h3.classList.add('font-bold', 'text-xl', 'sm:text-2xl', 'md:text-3xl', '2xl:text-4xl', 'mb-5', 'md:mb-10', 'text-orange-400');
-  const h3Text = document.createTextNode(`${experience.name}, ${experience.age}`);
+  const h3Text = document.createTextNode(experience.name);
   h3.append(h3Text);
 
   const p = document.createElement('p');

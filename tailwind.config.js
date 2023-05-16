@@ -26,6 +26,7 @@ module.exports = {
       },
       boxShadow: {
         '3xl': '1px 0px 7px -1px rgba(0, 0, 0, 0.3)',
+        '4xl': '1px 0 8px 0 rgba(0, 0, 0, 0.3)',
         'lin': '1px 0px 2px 1px rgba(0, 0, 0, 0.3)',
       },
       keyframes: {
