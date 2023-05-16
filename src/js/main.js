@@ -2,7 +2,9 @@
 const menuIcon = document.querySelector('#menu');
 const menuItems = document.querySelector('#menu-items');
 // Experiences
-const cardsSection = document.querySelector('#cards-section');
+const cardsSectionSl = document.querySelector('#cards-section-sl');
+const cardsSectionL = document.querySelector('#cards-section-l');
+const cardsSectionP = document.querySelector('#cards-section-p');
 const homeCardsSection = document.querySelector('#home-cards-section');
 // Dark mode
 const darkModeButton = document.querySelector('#dark-mode');
@@ -80,19 +82,22 @@ function toggleScroll() {
 
 
 // Experiences
-function renderCards(data, container) {
-  const toRender = [];
+function renderCards(data) {
+  const toRenderHome = []
+  const toRenderSociolinguistic = [];
+  const toRenderLinguistic = [];
+  const toRenderPragmatic = [];
 
   data.forEach(experience => {
     const a = document.createElement('a');
-    a.classList.add('mb-10', 'transition', 'ease-in-out', 'duration-300', 'hover:scale-[1.03]')
+    a.classList.add('mb-10', 'transition', 'ease-in-out', 'duration-300', 'hover:scale-[1.03]', 'h-auto')
     //href
     const url = new URL('/experience/', window.location.href);
-    url.searchParams.set('name', experience.name.toLowerCase());
+    url.searchParams.set('id', experience.id);
     a.href = url.toString();
 
     const article = document.createElement('article');
-    article.classList.add('flex', 'flex-col', 'justify-center', 'items-center', 'rounded-xl', 'shadow-md', 'max-w-[380px]', 'dark:bg-dark-sec');
+    article.classList.add('flex', 'flex-col', 'justify-center', 'items-center', 'rounded-xl', 'shadow-4xl', 'max-w-[380px]', 'dark:bg-dark-sec', 'min-h-[200px]', 'sm:min-h-[220px]');
 
     const div = document.createElement('div');
     div.classList.add('px-4', 'pt-3');
@@ -103,15 +108,15 @@ function renderCards(data, container) {
     h3.append(h3Text);
 
     p = document.createElement('p');
-    p.classList.add('mb-2', '2xl:h-[168px]');
+    p.classList.add('mb-2');
     // Short text
-    // const text = experience.text.substr(0, 220) + '...';
-    const text = document.createTextNode(`"${experience.text}".`);
+    const shortText = experience.text.substr(0, 180) + '...';
+    const text = document.createTextNode(`"${shortText}"`);
     p.append(text);
 
     span = document.createElement('span');
     span.classList.add('block', 'text-orange-500', 'text-sm', 'text-right', 'mb-1', 'font-light');
-    spanText = document.createTextNode('Click to comment');
+    spanText = document.createTextNode('Click to read');
     span.append(spanText);
 
     div.append(h3, p, span);
@@ -120,31 +125,54 @@ function renderCards(data, container) {
 
     a.append(article);
 
-    toRender.push(a);
+    if (experience.id == 1 || experience.id == 2 || experience.id == 3 || experience.id == 4) {
+      toRenderHome.push(a);
+    }
+
+    switch (experience.category) {
+      case 'sociolinguistic':
+        toRenderSociolinguistic.push(a);
+        break;
+      case 'linguistic':
+        toRenderLinguistic.push(a);
+        break;
+      case 'pragmatic':
+        toRenderPragmatic.push(a);
+        break;
+      default:
+        console.log('Ikke noe spesielt');
+    }
   });
 
-  container.append(...toRender);
+  if (homeCardsSection) {
+    homeCardsSection.append(...toRenderHome);
+  } else {
+    cardsSectionSl.append(...toRenderSociolinguistic);
+    cardsSectionL.append(...toRenderLinguistic);
+    cardsSectionP.append(...toRenderPragmatic);
+  }
 }
 
+renderCards(experiences);
 
 // Home Experiences
-const currentLocation = window.location.href;
+/* const currentLocation = window.location.href;
 const topExperiences = experiences.slice(0, 3);
 
 
 switch (currentLocation) {
   case 'https://summer-camp-experiences.netlify.app/':
-    renderCards(topExperiences, homeCardsSection);
+    renderCards(experiences);
     break;
   case 'https://summer-camp-experiences.netlify.app/experiences/':
-    renderCards(experiences, cardsSection);
+    renderCards(experiences);
     break;
   case 'http://127.0.0.1:5500/':
-    renderCards(topExperiences, homeCardsSection);
+    renderCards(experiences);
     break;
   case 'http://127.0.0.1:5500/experiences/':
-    renderCards(experiences, cardsSection);
+    renderCards(experiences);
     break;
   default:
     console.log('Ikke noe spesielt');
-}
+} */

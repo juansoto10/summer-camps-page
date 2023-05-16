@@ -3,23 +3,21 @@ const experienceSection = document.querySelector('#experience-section');
 const experienceComments = document.querySelector('#experience-comments');
 // Query parameter
 const params = new URLSearchParams(window.location.search);
-const selectedExperience = params.get('name');
+const selectedExperience = params.get('id');
 
 
 // Experience
-function getExperience(name, experiences) {
+function getExperience(id, experiences) {
   for (let experience of experiences) {
-    const experienceName = experience.name.toLowerCase();
-    
-    if (experienceName === name) {
+    if (experience.id == id) {
       return experience;
     }
   }
 }
 
 
-function showExperience(name) {
-  const experience = getExperience(name, experiences);
+function showExperience(id) {
+  const experience = getExperience(id, experiences);
 
   const h3 = document.createElement('h3');
   h3.classList.add('font-bold', 'text-xl', 'sm:text-2xl', 'md:text-3xl', '2xl:text-4xl', 'mb-5', 'md:mb-10', 'text-orange-400');
