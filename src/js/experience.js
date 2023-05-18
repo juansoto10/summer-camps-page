@@ -1,9 +1,47 @@
+// Menu
+const menuIcon = document.querySelector('#menu');
+const menuItems = document.querySelector('#menu-items');
 // Containers
 const experienceSection = document.querySelector('#experience-section');
 const experienceComments = document.querySelector('#experience-comments');
 // Query parameter
 const params = new URLSearchParams(window.location.search);
 const selectedExperience = params.get('id');
+// Dark mode
+const darkModeButton = document.querySelector('#dark-mode');
+const body = document.querySelector('body');
+const isDarkModeActive = JSON.parse(localStorage.getItem('darkMode'));
+
+
+// Dark mode
+document.addEventListener('DOMContentLoaded', () => {
+  isDarkModeActive ? body.classList.add('dark') : body.classList.remove('dark');
+});
+
+
+darkModeButton.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  localStorage.setItem('darkMode', body.classList.contains('dark'));
+})
+
+
+// Menu
+menuIcon.addEventListener('click', () => {
+  menuIcon.name === 'menu-outline' ? (menuIcon.name = 'close-outline') : (menuIcon.name = 'menu-outline');
+  menuItems.classList.toggle('hidden');
+  menuItems.classList.toggle('block');
+
+  toggleScroll()
+})
+
+
+function toggleScroll() {
+  if (!menuItems.classList.contains('hidden')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+}
 
 
 // Experience

@@ -45,9 +45,6 @@ function toggleScroll() {
 }
 
 
-// Call the toggleScroll function when the opacity of the ul element changes
-/* menuItems.addEventListener('transitionend', toggleScroll); */
-
 /* <!-- Card -->
 <a class="mb-10 transition ease-in-out duration-300 hover:scale-[1.03]" href="/experience/">
   <article class="flex flex-col justify-center items-center rounded-xl shadow-4xl max-w-[380px] dark:bg-dark-sec">
@@ -146,7 +143,7 @@ function renderCards(data) {
 
   if (homeCardsSection) {
     homeCardsSection.append(...toRenderHome);
-  } else {
+  } else if (cardsSectionSl || cardsSectionL || cardsSectionP) {
     cardsSectionSl.append(...toRenderSociolinguistic);
     cardsSectionL.append(...toRenderLinguistic);
     cardsSectionP.append(...toRenderPragmatic);

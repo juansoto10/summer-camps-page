@@ -699,11 +699,6 @@ video {
   margin-bottom: 3rem;
 }
 
-.my-9 {
-  margin-top: 2.25rem;
-  margin-bottom: 2.25rem;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -2237,6 +2232,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2843,14 +2843,14 @@ video {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+
+  .s\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 760px) {
-  .sm\:my-12 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-
   .sm\:mb-0 {
     margin-bottom: 0px;
   }
@@ -2863,18 +2863,6 @@ video {
     margin-bottom: 6rem;
   }
 
-  .sm\:flex {
-    display: flex;
-  }
-
-  .sm\:min-h-\[240px\] {
-    min-height: 240px;
-  }
-
-  .sm\:min-h-\[230px\] {
-    min-height: 230px;
-  }
-
   .sm\:min-h-\[220px\] {
     min-height: 220px;
   }
@@ -2885,14 +2873,6 @@ video {
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:flex-col {
-    flex-direction: column;
-  }
-
-  .sm\:flex-wrap {
-    flex-wrap: wrap;
   }
 
   .sm\:pb-12 {
@@ -2912,14 +2892,14 @@ video {
     line-height: 2rem;
   }
 
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .sm\:underline {
@@ -3118,6 +3098,11 @@ video {
     line-height: 2rem;
   }
 
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -3126,11 +3111,6 @@ video {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   :is(.dark .dark\:lg\:hover\:\[paint-order\:markers\]:hover) {
@@ -3189,21 +3169,12 @@ video {
 }
 
 @media (min-width: 1600px) {
-  .\32xl\:my-20 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-
   .\32xl\:mb-16 {
     margin-bottom: 4rem;
   }
 
   .\32xl\:mb-20 {
     margin-bottom: 5rem;
-  }
-
-  .\32xl\:h-\[168px\] {
-    height: 168px;
   }
 
   .\32xl\:w-full {
