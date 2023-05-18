@@ -64,7 +64,7 @@ function showExperience(id) {
 
   const p = document.createElement('p');
   p.classList.add('mb-2');
-  p.innerHTML = experience.text;
+  p.innerHTML = `"${experience.text}".`;
 
   experienceSection.append(h3, p);
 
