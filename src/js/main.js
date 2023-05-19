@@ -87,7 +87,7 @@ function renderCards(data) {
 
   data.forEach(experience => {
     const a = document.createElement('a');
-    a.classList.add('mb-10', 'transition', 'ease-in-out', 'duration-300', 'hover:scale-[1.03]', 'h-auto')
+    a.classList.add('transition', 'ease-in-out', 'duration-300', 'hover:scale-[1.03]', 'h-auto')
     //href
     const url = new URL('/experience/', window.location.href);
     url.searchParams.set('id', experience.id);

@@ -755,6 +755,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1442,10 +1446,6 @@ video {
 
 .justify-items-stretch {
   justify-items: stretch;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-8 {
@@ -2207,6 +2207,10 @@ video {
   vertical-align: super;
 }
 
+.font-titillium {
+  font-family: "Titillium Web", sans-serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2230,11 +2234,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold {
@@ -2942,6 +2941,10 @@ video {
     margin-top: 0px;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -3001,6 +3004,10 @@ video {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
   }
 
   .md\:border-none {
@@ -3175,6 +3182,14 @@ video {
 
   .\32xl\:mb-20 {
     margin-bottom: 5rem;
+  }
+
+  .\32xl\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .\32xl\:mb-14 {
+    margin-bottom: 3.5rem;
   }
 
   .\32xl\:w-full {

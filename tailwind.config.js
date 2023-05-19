@@ -10,7 +10,7 @@ module.exports = {
         '100': 'calc(100vh - 84px)',
       },
       fontFamily: {
-        'bungee': ['Bungee', 'cursive'],
+        'titillium': ['"Titillium Web"', 'sans-serif'],
         'ibmplex': ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {
