@@ -743,6 +743,10 @@ video {
   margin-right: 1rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -757,10 +761,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .box-border {
@@ -2155,6 +2155,14 @@ video {
   padding-top: 0.75rem;
 }
 
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2890,6 +2898,10 @@ video {
     padding-left: 1.5rem;
   }
 
+  .sm\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2947,6 +2959,10 @@ video {
 
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:flex {
@@ -3038,6 +3054,16 @@ video {
     padding-bottom: 5rem;
   }
 
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .md\:pb-10 {
     padding-bottom: 2.5rem;
   }
@@ -3091,6 +3117,10 @@ video {
     height: calc(100vh - 84px);
   }
 
+  .lg\:h-auto {
+    height: auto;
+  }
+
   .lg\:max-w-\[480px\] {
     max-width: 480px;
   }
@@ -3102,6 +3132,22 @@ video {
 
   .lg\:pl-12 {
     padding-left: 3rem;
+  }
+
+  .lg\:pb-28 {
+    padding-bottom: 7rem;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .lg\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .lg\:pb-24 {
+    padding-bottom: 6rem;
   }
 
   .lg\:text-2xl {
@@ -3134,6 +3180,10 @@ video {
     margin-bottom: 5rem;
   }
 
+  .xl\:h-100 {
+    height: calc(100vh - 84px);
+  }
+
   .xl\:max-w-\[1150px\] {
     max-width: 1150px;
   }
@@ -3151,6 +3201,11 @@ video {
     padding-bottom: 6rem;
   }
 
+  .xl\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .xl\:pb-12 {
     padding-bottom: 3rem;
   }
@@ -3161,6 +3216,22 @@ video {
 
   .xl\:pl-14 {
     padding-left: 3.5rem;
+  }
+
+  .xl\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .xl\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .xl\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .xl\:pb-28 {
+    padding-bottom: 7rem;
   }
 
   .xl\:text-6xl {
@@ -3186,14 +3257,6 @@ video {
 
   .\32xl\:mb-20 {
     margin-bottom: 5rem;
-  }
-
-  .\32xl\:mb-8 {
-    margin-bottom: 2rem;
-  }
-
-  .\32xl\:mb-14 {
-    margin-bottom: 3.5rem;
   }
 
   .\32xl\:w-full {
@@ -3226,6 +3289,14 @@ video {
 
   .\32xl\:pl-16 {
     padding-left: 4rem;
+  }
+
+  .\32xl\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .\32xl\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .\32xl\:text-3xl {
